@@ -3,10 +3,10 @@
 *an email containing the logs every 10 letters written*
 
 ## What i will Need to you this Script ?
-do you gonna need getkey and pathlib
+You are going to need getkey and pathlib.
 
-## How i install this libs ?
-**sample just copy and past in your terminal**
+## How do i install these libs ?
+**Just copy and paste this in your terminal**
 ```
 pip install getkey pathlib
 ```
