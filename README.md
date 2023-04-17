@@ -4,9 +4,9 @@
 
 ## What i will need to run this Script?
 You are going to need python and getkey.
-
+w
 ## How do i install getkey?
-Just run the setup.sh if you are on linux and setup.bat if you are on windows
+Just run setup file that corresponds to your system; use setup.sh if you are on linux or macOS, and if you are on windows run setup.bat.
 
 ## How do i install python?
 
