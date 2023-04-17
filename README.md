@@ -8,7 +8,7 @@ You are going to need getkey and pathlib.
 ## How do i install these libs ?
 **Just copy and paste this in your terminal**
 ```
-pip install getkey pathlib
+pip install getkey
 ```
 
 ## Features
